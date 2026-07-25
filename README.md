@@ -157,6 +157,7 @@ Does not provide legal advice.
 Does not replace professional privacy, security, or legal assessments.
 May produce incomplete or inaccurate results depending on the information provided and the AI model used.
 Users should treat FAIRLENS results as a starting point for further investigation and critical review.
+
 🌱 Future Improvements
 Potential future improvements include:
 📈 Interactive visual risk charts
@@ -168,8 +169,10 @@ Potential future improvements include:
 🧠 More advanced data classification
 🌍 Multilingual privacy analysis
 🔎 Evidence highlighting from analyzed text
+
 👩‍💻 Project Status
 Status: Active prototype
 FAIRLENS was created as a practical exploration of AI-assisted privacy analysis, responsible AI, data minimization, and human-centered technology.
+
 📜 License
 This project is intended for educational and portfolio purposes.
