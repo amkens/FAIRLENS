@@ -47,11 +47,11 @@ Users can describe what a service does and paste text from signup forms, privacy
 
 ---
 
-## 🧠 How FAIRLENS Works
+##  How FAIRLENS Works
 
 FAIRLENS follows a hybrid analysis approach that combines deterministic logic with contextual AI reasoning.
 
-```text
+-text
 User Input
     │
     ▼
@@ -89,3 +89,87 @@ Structured Privacy Risk Report
     ├── Risk Categories
     ├── Key Findings
     └── Recommended Actions
+
+The AI does not automatically treat sensitive information as unnecessary or high-risk.
+Instead, FAIRLENS considers the context of the service.
+For example:
+A banking service requesting financial information may be reasonable.
+A healthcare service requesting health information may be expected.
+A weather application requesting precise location may be context-dependent.
+A simple calculator application requesting precise location may be potentially excessive.
+
+Core Modules
+| File                 | Purpose                                                       |
+| -------------------- | ------------------------------------------------------------- |
+| `app.py`             | Gradio-based user interface                                   |
+| `risk_analyzer.py`   | Main AI analysis pipeline and result processing               |
+| `data_classifier.py` | Detects and classifies requested data                         |
+| `risk_framework.py`  | Defines risk levels, categories, and framework logic          |
+| `prompts.py`         | Contains AI system and analysis prompts                       |
+| `test_analyzer.py`   | Tests analysis functionality and validation                   |
+| `requirements.txt`   | Python project dependencies                                   |
+| `.env.example`       | Example environment variable configuration                    |
+| `.gitignore`         | Prevents sensitive and unnecessary files from being committed |
+
+🖥️ Tech Stack
+Python
+Gradio — User interface
+Groq API — AI-powered analysis
+python-dotenv — Environment variable management
+JSON — Structured AI responses
+Custom Python Risk Framework — Privacy risk categorization
+Custom Data Classifier — Deterministic data detection and classification
+
+🧪 Example Use Cases
+FAIRLENS can analyze text from:
+Website registration forms
+Mobile application signup forms
+Privacy notices
+Consent requests
+Cookie notices
+Permission requests
+Data collection statements
+Online services requesting personal information
+Example
+Service:
+An online weather application that provides local weather forecasts.
+Data Collection Text:
+To provide personalized weather forecasts, we request your precise location. You may also optionally provide your email address to receive weekly weather updates.
+FAIRLENS can evaluate:
+Whether location data appears necessary
+Whether precise location may be more data than required
+Whether email collection is optional
+Potential sensitivity of the requested information
+Transparency of the data collection explanation
+Overall privacy risk
+
+🔒 Privacy & Security
+FAIRLENS is designed to keep API credentials separate from source code.
+Sensitive configuration should be stored in a local .env file and excluded from Git using .gitignore.
+The .env.example file provides an example of the required environment variable without containing a real API key.
+Never commit real API keys to GitHub.
+
+⚠️ Disclaimer
+FAIRLENS provides AI-assisted privacy risk analysis for educational and informational purposes.
+The tool:
+Does not determine whether a service complies with any specific law or regulation.
+Does not provide legal advice.
+Does not replace professional privacy, security, or legal assessments.
+May produce incomplete or inaccurate results depending on the information provided and the AI model used.
+Users should treat FAIRLENS results as a starting point for further investigation and critical review.
+🌱 Future Improvements
+Potential future improvements include:
+📈 Interactive visual risk charts
+📊 Privacy risk dashboards
+📄 Exportable PDF reports
+🌐 Website URL scanning
+🔗 Automated privacy policy extraction
+🧾 Side-by-side comparison of privacy notices
+🧠 More advanced data classification
+🌍 Multilingual privacy analysis
+🔎 Evidence highlighting from analyzed text
+👩‍💻 Project Status
+Status: Active prototype
+FAIRLENS was created as a practical exploration of AI-assisted privacy analysis, responsible AI, data minimization, and human-centered technology.
+📜 License
+This project is intended for educational and portfolio purposes.
